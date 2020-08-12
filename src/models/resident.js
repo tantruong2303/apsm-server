@@ -1,9 +1,11 @@
+const { times } = require("lodash");
+
 module.exports.Resident = class Resident {
         constructor(name, houseId, sex, old, career) {
                 this._name = name;
                 this.houseId = houseId;
                 this._sex = sex;
-                this.old = old;
+                this._old = old; //21.3 -123 -321 -43
                 this._career = career;
         }
 
@@ -18,12 +20,17 @@ module.exports.Resident = class Resident {
                         .join(" ");
         }
 
+        //true = male , false = female
         set _sex(value) {
-                this.sex = value.toLowerCase();
+                this.sex = value;
         }
 
         get _sex() {
-                return this.sex;
+                return this.sex ? "male" : "female";
+        }
+
+        set _old(value) {
+                this.old = Math.round(value);
         }
 
         get _old() {
