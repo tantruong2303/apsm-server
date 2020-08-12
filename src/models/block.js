@@ -1,8 +1,12 @@
 module.exports.Block = class Block {
-        constructor(blockName, noOfFloor, blockId) {
-                this._blockName = name;
+        constructor(blockName, noOfFloor) {
+                this._blockName = blockName;
                 this.noOfFloor = noOfFloor;
-                this.blockId = blockId;
+                this.listFloor = [];
+        }
+
+        set _listFloor(value) {
+                this.listFloor.push(value);
         }
 
         set _blockName(value) {
@@ -15,5 +19,9 @@ module.exports.Block = class Block {
 
         get _noOfFloor() {
                 return this.noOfFloor;
+        }
+
+        get _listFloor() {
+                return this.listFloor;
         }
 };

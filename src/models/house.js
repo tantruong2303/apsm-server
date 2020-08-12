@@ -1,9 +1,11 @@
 module.exports.House = class House {
-        constructor(houseName, price, area, details) {
+        constructor(houseName, price, area, details, masterId) {
                 this_houseName = houseName;
                 this.price = price;
                 this.area = area;
                 this_details = details;
+                this.houseMaster = masterId;
+                this.listResident = [];
         }
 
         set _houseName(value) {
@@ -28,5 +30,17 @@ module.exports.House = class House {
 
         get _details() {
                 return this.details;
+        }
+
+        get _houseMaster() {
+                return this.houseMaster;
+        }
+
+        set _listResident(value) {
+                this.listResident.push(value);
+        }
+
+        get _listResident() {
+                return this.listResident;
         }
 };
