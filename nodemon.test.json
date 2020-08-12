@@ -1,0 +1,7 @@
+{
+        "env": {
+                "NODE_ENV": "test",
+                "DB_URL": "mongodb+srv://user:Gh9cX8jLcYyjWvT6@cluster0-xc8gi.mongodb.net/dev-test",
+                "SECRET_SESSION_KEY": "8iDJ95xuP"
+        }
+}
