@@ -41,5 +41,8 @@ module.exports = function (app) {
         app.get("/register", (req, res) => {
                 res.render("register.ejs", { pageTitle: "Register" });
         });
+        app.get("/changePassword", (req, res) => {
+                res.render("changePassword.ejs", { pageTitle: "Change password" });
+        });
         //---------------------------//
 };
