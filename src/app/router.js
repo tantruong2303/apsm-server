@@ -5,7 +5,7 @@ const session = require("express-session");
 const cors = require("cors");
 const passport = require("passport");
 const MongoDbStore = require("connect-mongodb-session")(session);
-const router = express.Router();
+const user = require("../router/users");
 
 const userToken = new MongoDbStore({
         uri: process.env.DB_URL,
@@ -32,17 +32,9 @@ module.exports = function (app) {
         app.use(passport.session());
         app.set("view engine", "ejs");
         app.set("views", path.join(__dirname, "../views"));
-        console.log(path.join(__dirname, "../view"));
         app.use(express.static(path.join(__dirname, "../public")));
         //--------------Router--------//
-        app.get("/login", (req, res) => {
-                res.render("login.ejs", { pageTitle: "Login" });
-        });
-        app.get("/register", (req, res) => {
-                res.render("register.ejs", { pageTitle: "Register" });
-        });
-        app.get("/changePassword", (req, res) => {
-                res.render("changePassword.ejs", { pageTitle: "Change password" });
-        });
+
+        app.use("/user", user);
         //---------------------------//
 };
