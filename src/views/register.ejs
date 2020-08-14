@@ -1,41 +1,56 @@
 <%- include("./includes/head") %>
-<html>
-        <body>
-                <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
-                        <form class="p-4" style="width: 500px;">
+<body style="background-color: #7d98b1; font-size: 20px;">
+        <%- include("./includes/menu") %>
+        <div class="container-fluid d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+                <div style="background-color: #517089; border-radius: 15px;">
+                        <form class="p-4" id="register-form" style="width: 400px; color: white;">
+                                <h4 class="pb-1">Register</h4>
                                 <div class="form-group">
-                                        <label for="username">Username</label>
                                         <input
-                                                type="text"
+                                                type="username"
+                                                name="username"
                                                 class="form-control"
                                                 id="username"
                                                 placeholder="Username"
-                                                required
+                                                style="height: 50px; border-radius: 10px;"
                                         />
                                 </div>
                                 <div class="form-group">
-                                        <label for="password">Password</label>
                                         <input
                                                 type="password"
+                                                name="password"
                                                 class="form-control"
                                                 id="password"
                                                 placeholder="Password"
-                                                required
+                                                style="height: 50px; border-radius: 10px;"
                                         />
                                 </div>
                                 <div class="form-group">
-                                        <label for="confirm-password">Confirm password</label>
                                         <input
                                                 type="password"
+                                                name="confirm-password"
                                                 class="form-control"
                                                 id="confirm-password"
                                                 placeholder="Confirm password"
-                                                required
+                                                style="height: 50px; border-radius: 10px;"
                                         />
                                 </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button
+                                        type="submit"
+                                        class="form-control"
+                                        style="
+                                                height: 60px;
+                                                border-radius: 15px;
+                                                background-color: #52acca;
+                                                color: white;
+                                                border: #52acca;
+                                        "
+                                >
+                                        Submit
+                                </button>
                         </form>
                 </div>
-                <%- include("./includes/foot") %>
-        </body>
-</html>
+        </div>
+</body>
+<%- include("./includes/foot") %>
+<script src="/script/login.js"></script>
