@@ -1,0 +1,74 @@
+<%- include("./includes/head") %>
+<body style="background-color: #7d98b1; font-size: 20px;">
+        <%- include("./includes/menu") %>
+        <div class="container-fluid d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+                <div style="background-color: #517089; border-radius: 15px;">
+                        <form class="p-4" id="register-form" style="width: 400px; color: white;">
+                                <h4 class="pb-1">Resident</h4>
+                                <div class="form-group">
+                                        <input
+                                                type="text"
+                                                name="name"
+                                                class="form-control"
+                                                id="name"
+                                                placeholder="Name"
+                                                style="height: 50px; border-radius: 10px;"
+                                        />
+                                </div>
+                                <div class="px-1 form-row justify-content-between">
+                                        <div class="form-group">
+                                                <select id="sex" style="height: 50px; border-radius: 10px;">
+                                                        <option selected>Male</option>
+                                                        <option value="1">Female</option>
+                                                </select>
+                                        </div>
+                                        <div class="form-group">
+                                                <input
+                                                        type="number"
+                                                        name="old"
+                                                        class="form-control"
+                                                        id="old"
+                                                        placeholder="Old"
+                                                        style="height: 50px; border-radius: 10px;"
+                                                />
+                                        </div>
+                                </div>
+                                <div class="form-group">
+                                        <input
+                                                type="text"
+                                                name="career"
+                                                class="form-control"
+                                                id="career"
+                                                placeholder="Career"
+                                                style="height: 50px; border-radius: 10px;"
+                                        />
+                                </div>
+                                <div class="form-group">
+                                        <input
+                                                type="number"
+                                                name="houseId"
+                                                class="form-control"
+                                                id="houseId"
+                                                placeholder="House ID"
+                                                style="height: 50px; border-radius: 10px;"
+                                        />
+                                </div>
+                                <button
+                                        type="submit"
+                                        class="form-control"
+                                        style="
+                                                height: 60px;
+                                                border-radius: 15px;
+                                                background-color: #52acca;
+                                                color: white;
+                                                border: #52acca;
+                                        "
+                                >
+                                        Submit
+                                </button>
+                        </form>
+                </div>
+        </div>
+</body>
+<%- include("./includes/foot") %>
+<script src="/script/login.js"></script>

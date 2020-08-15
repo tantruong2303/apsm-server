@@ -36,5 +36,6 @@ module.exports = function (app) {
         //--------------Router--------//
 
         app.use("/user", user);
+
         //---------------------------//
 };

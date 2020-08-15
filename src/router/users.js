@@ -15,6 +15,10 @@ router.get("/changePassword", (req, res) => {
         res.render("changePassword.ejs", { pageTitle: "Change password" });
 });
 
+router.get("/resident", (req, res) => {
+        res.render("addResident.ejs", { pageTitle: "Add Resident" });
+});
+
 router.post("/register", async (req, res) => {
         const db = getDB().collection("user");
 
