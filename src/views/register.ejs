@@ -1,41 +1,46 @@
 <%- include("./includes/head") %>
 <html>
-        <body>
-                <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
-                        <form class="p-4" style="width: 500px;">
-                                <div class="form-group">
-                                        <label for="username">Username</label>
-                                        <input
-                                                type="text"
-                                                class="form-control"
-                                                id="username"
-                                                placeholder="Username"
-                                                required
-                                        />
-                                </div>
-                                <div class="form-group">
-                                        <label for="password">Password</label>
-                                        <input
-                                                type="password"
-                                                class="form-control"
-                                                id="password"
-                                                placeholder="Password"
-                                                required
-                                        />
-                                </div>
-                                <div class="form-group">
-                                        <label for="confirm-password">Confirm password</label>
-                                        <input
-                                                type="password"
-                                                class="form-control"
-                                                id="confirm-password"
-                                                placeholder="Confirm password"
-                                                required
-                                        />
-                                </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                        </form>
-                </div>
-                <%- include("./includes/foot") %>
-        </body>
+  <body>
+    <div
+      class="container d-flex justify-content-center align-items-center"
+      style="min-height: 100vh;"
+    >
+      <form class="p-4" style="width: 500px;" id="register-form">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input
+            type="username"
+            class="form-control"
+            id="username"
+            placeholder="Username"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            placeholder="Password"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Confirm password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="confirm-password"
+            placeholder="Confirm password"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <div id="status">...</div>
+      </form>
+    </div>
+    <%- include("./includes/foot") %>
+    <script src="/script/register.js"></script>
+  </body>
 </html>

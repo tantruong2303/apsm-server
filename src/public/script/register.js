@@ -1,19 +1,19 @@
 $(document).ready(function () {
-  $("#login-form").submit(function (event) {
+  $("#register-form").submit(function (event) {
     event.preventDefault();
 
     const user = {
       username: $("#username").val(),
       password: $("#password").val(),
+      confirm: $("#confirm-password").val(),
     };
 
-    $.ajax("/user/login", {
+    $.ajax("/user/register", {
       method: "POST",
       data: user,
       success: function (response) {
         $("#status").text("success.");
-        toastr.success("success.");
-        //$(location).attr("href", "http://localhost:3000/resident/add");
+        toastr.success(response);
       },
       error: function ({ responseText }) {
         $("#status").text("fail.");

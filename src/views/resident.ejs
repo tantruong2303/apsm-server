@@ -5,52 +5,60 @@
       class="container d-flex justify-content-center align-items-center"
       style="min-height: 100vh;"
     >
-      <form class="p-4" style="width: 500px;" id="changePassword-form">
+      <form class="p-4" style="width: 500px;" id="resident-form">
         <div class="form-group">
-          <label for="username">Username</label>
+          <label for="name">Name</label>
           <input
-            type="username"
+            type="name"
             class="form-control"
-            id="username"
-            placeholder="Username"
+            id="name"
+            placeholder="Name"
             required
           />
         </div>
         <div class="form-group">
-          <label for="current-password">Current password</label>
+          <label for="houseId">HouseId</label>
           <input
-            type="password"
+            type="houseId"
             class="form-control"
-            id="current-password"
-            placeholder="Current password"
+            id="houseId"
+            placeholder="HouseId"
             required
           />
         </div>
         <div class="form-group">
-          <label for="new-password">New password</label>
+          <label for="sex">Sex</label>
           <input
-            type="password"
+            type="sex"
             class="form-control"
-            id="new-password"
-            placeholder="New password"
+            id="sex"
+            placeholder="Sex"
             required
           />
         </div>
         <div class="form-group">
-          <label for="confirm-password">Confirm password</label>
+          <label for="old">Old</label>
           <input
-            type="password"
+            type="old"
             class="form-control"
-            id="confirm-password"
-            placeholder="Confirm password"
+            id="old"
+            placeholder="Old"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="carrer">Career</label>
+          <input
+            type="carrer"
+            class="form-control"
+            id="career"
+            placeholder="Career"
             required
           />
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
-        <div id="status">...</div>
       </form>
     </div>
     <%- include("./includes/foot") %>
-    <script src="/script/changePassword.js"></script>
   </body>
 </html>
