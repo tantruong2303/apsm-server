@@ -1,23 +1,22 @@
 <%- include("./includes/head") %>
-<body style="background-color: #7d98b1; font-size: 20px;">
+<body>
         <%- include("./includes/menu") %>
-        <div class="container-fluid d-flex justify-content-center align-items-center" style="min-height: 80vh;">
-                <div style="background-color: #517089; border-radius: 15px;">
-                        <form class="p-4" id="add-resident-form" style="width: 400px; color: white;">
+        <div class="container-fluid d-flex justify-content-center align-items-center min-height-80">
+                <div class="container-form">
+                        <form class="p-4" id="add-resident-form">
                                 <h4 class="pb-1">Resident</h4>
                                 <div class="form-group">
                                         <input
                                                 type="text"
                                                 name="name"
-                                                class="form-control"
+                                                class="form-control form-input"
                                                 id="name"
                                                 placeholder="Name"
-                                                style="height: 50px; border-radius: 10px;"
                                         />
                                 </div>
                                 <div class="px-1 form-row justify-content-between">
                                         <div class="form-group">
-                                                <select id="sex" style="height: 50px; border-radius: 10px;">
+                                                <select class="form-control form-input" id="sex">
                                                         <option selected>Male</option>
                                                         <option value="1">Female</option>
                                                 </select>
@@ -26,10 +25,9 @@
                                                 <input
                                                         type="number"
                                                         name="old"
-                                                        class="form-control"
+                                                        class="form-control form-input"
                                                         id="old"
                                                         placeholder="Old"
-                                                        style="height: 50px; border-radius: 10px;"
                                                 />
                                         </div>
                                 </div>
@@ -37,33 +35,21 @@
                                         <input
                                                 type="text"
                                                 name="career"
-                                                class="form-control"
+                                                class="form-control form-input"
                                                 id="career"
                                                 placeholder="Career"
-                                                style="height: 50px; border-radius: 10px;"
                                         />
                                 </div>
                                 <div class="form-group">
                                         <input
                                                 type="number"
                                                 name="houseId"
-                                                class="form-control"
+                                                class="form-control form-input"
                                                 id="houseId"
                                                 placeholder="House ID"
-                                                style="height: 50px; border-radius: 10px;"
                                         />
                                 </div>
-                                <button
-                                        type="submit"
-                                        class="form-control"
-                                        style="
-                                                height: 60px;
-                                                border-radius: 15px;
-                                                background-color: #52acca;
-                                                color: white;
-                                                border: #52acca;
-                                        "
-                                >
+                                <button type="submit" class="form-control form-submit">
                                         Submit
                                 </button>
                         </form>

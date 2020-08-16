@@ -8,7 +8,7 @@ $(document).ready(function () {
                         confirmPassword: $("#confirm-password").val(),
                 };
 
-                $.ajax("/user/register", {
+                $.ajax("/api/user/register", {
                         method: "POST",
                         data: user,
                         success: function (response) {

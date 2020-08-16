@@ -7,7 +7,7 @@ $(document).ready(function () {
                         password: $("#password").val(),
                 };
 
-                $.ajax("/user/login", {
+                $.ajax("/api/user/login", {
                         method: "POST",
                         data: user,
                         success: function (response) {

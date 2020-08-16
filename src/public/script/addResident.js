@@ -10,7 +10,7 @@ $(document).ready(function () {
                         houseId: $("houseId").val(),
                 };
 
-                $.ajax("/user/resident", {
+                $.ajax("/api/user/resident", {
                         method: "POST",
                         data: resident,
                         success: function (response) {

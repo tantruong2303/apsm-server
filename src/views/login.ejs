@@ -1,41 +1,29 @@
 <%- include("./includes/head") %>
-<body style="background-color: #7d98b1; font-size: 20px;">
+<body>
         <%- include("./includes/menu") %>
-        <div class="container-fluid d-flex justify-content-center align-items-center" style="min-height: 80vh;">
-                <div style="background-color: #517089; border-radius: 15px;">
-                        <form class="p-4" id="login-form" style="width: 400px; color: white;">
+        <div class="container-fluid d-flex justify-content-center align-items-center min-height-80">
+                <div class="container-form">
+                        <form class="p-4" id="login-form">
                                 <h4 class="pb-1">Login</h4>
                                 <div class="form-group">
                                         <input
                                                 type="username"
                                                 name="username"
-                                                class="form-control"
+                                                class="form-control form-input"
                                                 id="username"
                                                 placeholder="Username"
-                                                style="height: 50px; border-radius: 10px;"
                                         />
                                 </div>
                                 <div class="form-group">
                                         <input
                                                 type="password"
                                                 name="password"
-                                                class="form-control"
+                                                class="form-control form-input"
                                                 id="password"
                                                 placeholder="Password"
-                                                style="height: 50px; border-radius: 10px;"
                                         />
                                 </div>
-                                <button
-                                        type="submit"
-                                        class="form-control"
-                                        style="
-                                                height: 60px;
-                                                border-radius: 15px;
-                                                background-color: #52acca;
-                                                color: white;
-                                                border: #52acca;
-                                        "
-                                >
+                                <button type="submit" class="form-control form-submit">
                                         Sign in
                                 </button>
                         </form>

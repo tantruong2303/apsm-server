@@ -6,6 +6,7 @@ const cors = require("cors");
 const passport = require("passport");
 const MongoDbStore = require("connect-mongodb-session")(session);
 const user = require("../router/users");
+const apiUser = require("../router/apiUsers");
 
 const userToken = new MongoDbStore({
         uri: process.env.DB_URL,
@@ -35,6 +36,7 @@ module.exports = function (app) {
         app.use(express.static(path.join(__dirname, "../public")));
         //--------------Router--------//
 
+        app.use("/api/user", apiUser);
         app.use("/user", user);
 
         //---------------------------//
