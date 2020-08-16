@@ -1,0 +1,31 @@
+body {
+        background-color: #7d98b1;
+        font-size: 16px;
+}
+
+form {
+        width: 400px;
+        color: white;
+}
+
+.min-height-80 {
+        min-height: 80vh;
+}
+
+.container-form {
+        background-color: #517089;
+        border-radius: 15px;
+}
+
+.form-input {
+        height: 50px;
+        border-radius: 10px;
+}
+
+.form-submit {
+        height: 60px;
+        border-radius: 15px;
+        background-color: #52acca;
+        color: white;
+        border: #52acca;
+}

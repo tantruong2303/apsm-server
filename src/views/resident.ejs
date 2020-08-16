@@ -1,64 +1,60 @@
 <%- include("./includes/head") %>
-<html>
-  <body>
-    <div
-      class="container d-flex justify-content-center align-items-center"
-      style="min-height: 100vh;"
-    >
-      <form class="p-4" style="width: 500px;" id="resident-form">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input
-            type="name"
-            class="form-control"
-            id="name"
-            placeholder="Name"
-            required
-          />
+<body>
+        <%- include("./includes/menu") %>
+        <div class="container-fluid d-flex justify-content-center align-items-center min-height-80">
+                <div class="container-form">
+                        <form class="p-4" id="add-resident-form">
+                                <h4 class="pb-1">Resident</h4>
+                                <div class="form-group">
+                                        <input
+                                                type="text"
+                                                name="name"
+                                                class="form-control form-input"
+                                                id="name"
+                                                placeholder="Name"
+                                        />
+                                </div>
+                                <div class="px-1 form-row justify-content-between">
+                                        <div class="form-group">
+                                                <select class="form-control form-input" id="sex">
+                                                        <option selected>Male</option>
+                                                        <option value="1">Female</option>
+                                                </select>
+                                        </div>
+                                        <div class="form-group">
+                                                <input
+                                                        type="number"
+                                                        name="old"
+                                                        class="form-control form-input"
+                                                        id="old"
+                                                        placeholder="Old"
+                                                />
+                                        </div>
+                                </div>
+                                <div class="form-group">
+                                        <input
+                                                type="text"
+                                                name="career"
+                                                class="form-control form-input"
+                                                id="career"
+                                                placeholder="Career"
+                                        />
+                                </div>
+                                <div class="form-group">
+                                        <input
+                                                type="number"
+                                                name="houseId"
+                                                class="form-control form-input"
+                                                id="houseId"
+                                                placeholder="House ID"
+                                        />
+                                </div>
+                                <button type="submit" class="form-control form-submit">
+                                        Submit
+                                </button>
+                        </form>
+                </div>
         </div>
-        <div class="form-group">
-          <label for="houseId">HouseId</label>
-          <input
-            type="houseId"
-            class="form-control"
-            id="houseId"
-            placeholder="HouseId"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="sex">Sex</label>
-          <input
-            type="sex"
-            class="form-control"
-            id="sex"
-            placeholder="Sex"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="old">Old</label>
-          <input
-            type="old"
-            class="form-control"
-            id="old"
-            placeholder="Old"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="carrer">Career</label>
-          <input
-            type="carrer"
-            class="form-control"
-            id="career"
-            placeholder="Career"
-            required
-          />
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
-    </div>
-    <%- include("./includes/foot") %>
-  </body>
-</html>
+</body>
+<%- include("./includes/foot") %>
+<script src="/script/login.js"></script>
