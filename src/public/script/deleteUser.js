@@ -1,13 +1,13 @@
 $(document).ready(function () {
-        $("#login-form").submit(function (event) {
+        $("#delete-user").submit(function (event) {
                 event.preventDefault();
 
                 const user = {
-                        username: $("#username").val(),
+                        confirmPassword: $("#confirm-password").val(),
                         password: $("#password").val(),
                 };
 
-                $.ajax("/api/user/login", {
+                $.ajax("/api/user/delete", {
                         method: "POST",
                         data: user,
                         success: function (response) {

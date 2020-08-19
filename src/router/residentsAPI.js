@@ -4,8 +4,9 @@ const formatError = require("../utils/formatError");
 const express = require("express");
 const router = express.Router();
 const _ = require("lodash");
+const auth = require("../middleware/auth");
 
-router.post("/add", async (req, res) => {
+router.post("/add", [auth], async (req, res) => {
         const db = getDB().collection("resident");
         const info = _.pick(req.body, ["name", "houseId", "sex", "old", "career"]);
         const { error, value } = Resident.validateResident(info);

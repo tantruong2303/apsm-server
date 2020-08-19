@@ -8,6 +8,12 @@ class User {
                 this.isAdmin = false;
         }
 
+        static classTraformer({ username, isAdmin }) {
+                const user = new User(username, "");
+                user.isAdmin = isAdmin;
+                return user;
+        }
+
         set _username(value) {
                 this.username = value.toLowerCase();
         }

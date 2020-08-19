@@ -4,6 +4,7 @@ const formatError = require("../utils/formatError");
 const express = require("express");
 const router = express.Router();
 const _ = require("lodash");
+const auth = require("../middleware/auth");
 
 router.post("/register", async (req, res) => {
         const db = getDB().collection("user");
@@ -44,11 +45,11 @@ router.post("/login", async (req, res) => {
 
         const isCorrect = await user.comparePassword(value.password);
         if (!isCorrect) return res.status(400).send("username or password is not correct.");
-        console.log("test");
-        res.redirect("/resident/add");
+
+        res.status(200).cookie("_id", userInDB._id).end();
 });
 
-router.post("/changePassword", async (req, res) => {
+router.post("/changePassword", [auth], async (req, res) => {
         const db = getDB().collection("user");
 
         const info = _.pick(req.body, ["username", "currentPassword", "newPassword", "confirm"]);
